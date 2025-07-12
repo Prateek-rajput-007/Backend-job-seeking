@@ -54,12 +54,12 @@ try {
 }
 
 // Serve static frontend files
-app.use(express.static(path.join(__dirname, "frontend", "dist")));
+// app.use(express.static(path.join(__dirname, "frontend", "dist")));
 
-// Catch-all route for SPA support
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
-});
+// // Catch-all route for SPA support
+// app.get("*", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
+// });
 
 // Error Middleware
 app.use(errorMiddleware);
